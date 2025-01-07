@@ -42,8 +42,8 @@ return [
             // 数据库连接参数
             'params' => [
             // 启用 SSL
-                                PDO::MYSQL_ATTR_SSL_CA => __DIR__ . '/../ssl/ca-certificate.pem', // CA 证书路径
-                                PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false, // 是否验证服务器证书
+                                \PDO::MYSQL_ATTR_SSL_CA => __DIR__ . '/mtab/ssl/ca.pem', // CA 证书路径
+                                \PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false, // 是否验证服务器证书
                         ],
             'charset'         => env('database.charset', 'utf8mb4'),
             // 数据库表前缀
